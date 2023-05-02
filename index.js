@@ -8,8 +8,9 @@ const { postRoute } = require("./Routes/PostRoute")
 
 
 const app=express()
-app.use(express.json())
 app.use(cors())
+app.use(express.json())
+
 app.use("/user",userRouter)
 app.use(auth)
 app.use("/posts",postRoute)
